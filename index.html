@@ -11,7 +11,22 @@
 
 
 <script src="/assets/0d6fd72b-4743-4fbf-8a8a-1fc168c2c312.js"></script>
+<script>
+window.addEventListener("load", function () {
+  window.setTimeout(function () {
+    document.documentElement.classList.add("pp-ready");
+  }, 350);
+});
+</script>
 <style>
+html:not(.pp-ready) body {
+  visibility: hidden;
+}
+
+html.pp-ready body {
+  visibility: visible;
+}
+
 @media (max-width: 760px) {
   header > div {
     height: auto !important;
@@ -47,6 +62,12 @@
   header nav a[href^="tel:"] {
     display: none !important;
   }
+}
+
+[style*="animation:pp-rise"] {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 </style>
 </head>
@@ -502,7 +523,7 @@
   <!-- ============ HEADER ============ -->
   <header style="position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid rgba(17,26,77,0.10)">
     <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 40px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:32px">
-      <a href="#top" style="display:flex;align-items:center;text-decoration:none">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none">
         <img src="/assets/0284f397-b87f-4d08-be34-25fa5212b02d.png" alt="Prestige Paintwork" style="height:24px;width:auto;display:block">
       </a>
       <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:34px">

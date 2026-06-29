@@ -3,7 +3,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="/assets/bfc8e8b2-b01c-452a-9cb5-66a087060a42.js"></script>
+<script>
+window.addEventListener("load", function () {
+  window.setTimeout(function () {
+    document.documentElement.classList.add("pp-ready");
+  }, 350);
+});
+</script>
 <style>
+html:not(.pp-ready) body {
+  visibility: hidden;
+}
+
+html.pp-ready body {
+  visibility: visible;
+}
+
 @media (max-width: 760px) {
   header > div {
     height: auto !important;
@@ -39,6 +54,12 @@
   header nav a[href^="tel:"] {
     display: none !important;
   }
+}
+
+[style*="animation:pp-rise"] {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 </style>
 </head>
