@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/1b655914-8ac3-4032-a402-e974f7c9f6f9.js"></script>
+<style>
+@media (max-width: 760px) {
+  header > div {
+    height: auto !important;
+    min-height: 78px !important;
+    padding: 16px 24px !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+  }
+
+  header > div > a:first-child {
+    flex: 1 1 auto !important;
+  }
+
+  header > div > div {
+    order: 3 !important;
+    flex: 1 0 100% !important;
+    justify-content: flex-start !important;
+    gap: 18px !important;
+    overflow-x: auto !important;
+    padding-bottom: 2px !important;
+  }
+
+  header > div > div a,
+  header nav a {
+    flex: 0 0 auto !important;
+  }
+
+  header nav {
+    flex: 0 0 auto !important;
+    gap: 10px !important;
+  }
+
+  header nav a[href^="tel:"] {
+    display: none !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/20929eb3-a9f7-49a4-92a2-423e80a0837b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/5f3ca777-98ed-47fa-8443-9452e07035ad.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/1ede8bb9-08c7-4428-bbc3-bacee31efff9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/20929eb3-a9f7-49a4-92a2-423e80a0837b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/5f3ca777-98ed-47fa-8443-9452e07035ad.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/1ede8bb9-08c7-4428-bbc3-bacee31efff9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/763ab11e-1ce1-46c7-b866-8a2a4dc68543.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/b0480064-87a2-4262-a7c6-343f9069760d.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/51db5154-be19-4922-8bde-bfe70855286a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/763ab11e-1ce1-46c7-b866-8a2a4dc68543.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/b0480064-87a2-4262-a7c6-343f9069760d.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/51db5154-be19-4922-8bde-bfe70855286a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/763ab11e-1ce1-46c7-b866-8a2a4dc68543.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/b0480064-87a2-4262-a7c6-343f9069760d.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/51db5154-be19-4922-8bde-bfe70855286a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/763ab11e-1ce1-46c7-b866-8a2a4dc68543.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/b0480064-87a2-4262-a7c6-343f9069760d.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("/assets/51db5154-be19-4922-8bde-bfe70855286a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/1394499a-c884-4ed5-b0eb-5d70464c8d25.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/230de79c-706f-4ebe-a410-48e177c54f4f.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/1933cac2-d56f-463e-90b2-278b6db1df88.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/c355d6be-1756-45fe-8913-84145da09aa9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/1394499a-c884-4ed5-b0eb-5d70464c8d25.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/230de79c-706f-4ebe-a410-48e177c54f4f.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/1933cac2-d56f-463e-90b2-278b6db1df88.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/c355d6be-1756-45fe-8913-84145da09aa9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/1394499a-c884-4ed5-b0eb-5d70464c8d25.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/230de79c-706f-4ebe-a410-48e177c54f4f.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/1933cac2-d56f-463e-90b2-278b6db1df88.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/c355d6be-1756-45fe-8913-84145da09aa9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/1394499a-c884-4ed5-b0eb-5d70464c8d25.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/230de79c-706f-4ebe-a410-48e177c54f4f.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/1933cac2-d56f-463e-90b2-278b6db1df88.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/c355d6be-1756-45fe-8913-84145da09aa9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/acdb2dd5-b56f-47bf-bd73-e371dc5e5aca.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/c2ca45c2-741d-4788-8b93-7b1ede161dcb.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/feabe7ec-41b3-4873-8003-68e2747af531.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/45f19179-08db-4fc0-a9ad-95730e048f67.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/a421490c-d6ef-4a02-ba9a-6a26836d37c9.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/c393735a-6c0e-4b3a-aeeb-1bdd4b0d51fc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/acdb2dd5-b56f-47bf-bd73-e371dc5e5aca.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/c2ca45c2-741d-4788-8b93-7b1ede161dcb.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/feabe7ec-41b3-4873-8003-68e2747af531.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/45f19179-08db-4fc0-a9ad-95730e048f67.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/a421490c-d6ef-4a02-ba9a-6a26836d37c9.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/c393735a-6c0e-4b3a-aeeb-1bdd4b0d51fc.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  *, *::before, *::after { box-sizing: border-box; }
+  ::selection { background: var(--accent, #1E90DF); color: #fff; }
+</style>
+</helmet>
+<div style="--ink:{{ inkColor }};--accent:{{ accentColor }};background:#F7F9FC;color:var(--ink,#111A4D);font-family:'Hanken Grotesk',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid rgba(17,26,77,0.10)">
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 40px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+      <a href="index.html" style="display:flex;align-items:center;text-decoration:none">
+        <img src="/assets/94f13ce6-edba-4cbf-a994-546d26a50e0c.png" alt="Prestige Paintwork" style="height:24px;width:auto;display:block">
+      </a>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:34px">
+        <a href="services.html" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;opacity:0.78">Services</a>
+        <a href="our-work.html" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;opacity:0.78">Our Work</a>
+        <a href="faqs.html" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;opacity:0.78">FAQs</a>
+        <a href="about.html" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;opacity:0.78">About</a>
+        <a href="contact.html" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;opacity:0.78">Contact</a>
+      </div>
+      <nav style="display:flex;align-items:center;gap:22px">
+        <a href="tel:01428731147" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;display:flex;align-items:center;gap:8px">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--accent,#1E90DF);display:inline-block"></span>01428 731147
+        </a>
+        <a href="index.html#quote" style="font-size:14px;font-weight:600;color:#F7F9FC;background:var(--ink,#111A4D);text-decoration:none;padding:12px 22px;border-radius:2px">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <span id="top"></span>
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="Privacy hero" style="max-width:820px;margin:0 auto;padding:80px 40px 56px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent,#1E90DF);margin-bottom:24px">Legal</div>
+    <h1 style="font-family:'Archivo',sans-serif;font-weight:700;font-size:48px;line-height:1.06;letter-spacing:-0.02em;margin:0 0 18px;color:var(--ink,#111A4D)">Privacy Notice</h1>
+    <p style="font-size:16px;line-height:1.6;color:rgba(17,26,77,0.6);margin:0">JPM Prestige Paintworks Limited is registered with the Information Commissioner's Office (ICO) under registration reference ICO ZB077368. We process your personal information to meet our legal and contractual obligations and to provide you with our services. This notice provides you with the necessary information regarding your rights and obligations, and explains how, why and when we collect and process your personal data.</p>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <section data-screen-label="Privacy body" style="background:#FFFFFF;border-top:1px solid rgba(17,26,77,0.08);padding:64px 0 88px">
+    <div style="max-width:820px;margin:0 auto;padding:0 40px">
+
+      <sc-for list="{{ sections }}" as="s" hint-placeholder-count="12">
+        <div style="margin-bottom:40px">
+          <sc-if value="{{ s.title }}" hint-placeholder-val="{{ true }}">
+            <h2 style="font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;line-height:1.25;margin:0 0 16px;color:var(--ink,#111A4D)">{{ s.title }}</h2>
+          </sc-if>
+          <sc-for list="{{ s.paras }}" as="p" hint-placeholder-count="2">
+            <p style="font-size:16px;line-height:1.78;color:rgba(17,26,77,0.74);margin:0 0 14px">{{ p }}</p>
+          </sc-for>
+          <sc-if value="{{ s.bullets }}" hint-placeholder-val="{{ false }}">
+            <ul style="margin:6px 0 14px;padding-left:22px">
+              <sc-for list="{{ s.bullets }}" as="b" hint-placeholder-count="3">
+                <li style="font-size:16px;line-height:1.7;color:rgba(17,26,77,0.74);margin:0 0 8px">{{ b }}</li>
+              </sc-for>
+            </ul>
+          </sc-if>
+        </div>
+      </sc-for>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#EAEEF4;border-top:1px solid rgba(17,26,77,0.10)">
+    <div style="max-width:1280px;margin:0 auto;padding:56px 40px 40px;display:grid;grid-template-columns:1.92fr 1fr 1.2fr;gap:48px">
+      <div>
+        <img src="/assets/94f13ce6-edba-4cbf-a994-546d26a50e0c.png" alt="Prestige Paintwork" style="height:28px;width:auto;display:block">
+        <p style="font-size:14px;line-height:1.6;color:rgba(17,26,77,0.6);margin:14px 0 0;max-width:340px">Specialist accident repair and paintwork in Haslemere, Surrey. Trusted by drivers across Surrey and West Sussex, and backed by our Lifetime Warranty.</p>
+        <div style="display:flex;gap:16px;margin-top:22px">
+          <a href="#" aria-label="WhatsApp" style="color:rgba(17,26,77,0.5);display:flex" style-hover="color:var(--accent,#1E90DF)"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></a>
+          <a href="#" aria-label="Instagram" style="color:rgba(17,26,77,0.5);display:flex" style-hover="color:var(--accent,#1E90DF)"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a>
+          <a href="#" aria-label="Facebook" style="color:rgba(17,26,77,0.5);display:flex" style-hover="color:var(--accent,#1E90DF)"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a>
+          <a href="#" aria-label="X" style="color:rgba(17,26,77,0.5);display:flex" style-hover="color:var(--accent,#1E90DF)"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+          <a href="#" aria-label="YouTube" style="color:rgba(17,26,77,0.5);display:flex" style-hover="color:var(--accent,#1E90DF)"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a>
+          <a href="#" aria-label="TikTok" style="color:rgba(17,26,77,0.5);display:flex" style-hover="color:var(--accent,#1E90DF)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg></a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(17,26,77,0.5);margin-bottom:16px">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="services.html" style="font-size:14px;color:rgba(17,26,77,0.72);text-decoration:none">Services</a>
+          <a href="our-work.html" style="font-size:14px;color:rgba(17,26,77,0.72);text-decoration:none">Our Work</a>
+          <a href="faqs.html" style="font-size:14px;color:rgba(17,26,77,0.72);text-decoration:none">FAQs</a>
+          <a href="about.html" style="font-size:14px;color:rgba(17,26,77,0.72);text-decoration:none">About</a>
+          <a href="contact.html" style="font-size:14px;color:rgba(17,26,77,0.72);text-decoration:none">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(17,26,77,0.5);margin-bottom:16px">Get in touch</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:14px;line-height:1.6;color:rgba(17,26,77,0.72)">Units 24 &amp; 25 Mills Yard, Haslemere GU27 3DF</span>
+          <a href="tel:01428731147" style="font-size:14px;color:rgba(17,26,77,0.72);text-decoration:none">01428 731147</a>
+          <a href="mailto:info@prestigepaintwork.co.uk" style="font-size:14px;color:rgba(17,26,77,0.72);text-decoration:none">info@prestigepaintwork.co.uk</a>
+          <span style="font-size:14px;line-height:1.6;color:rgba(17,26,77,0.45)">Covering Haslemere, Godalming, Petersfield, Farnham, Guildford &amp; surrounding areas.</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1280px;margin:0 auto;padding:20px 40px 40px;border-top:1px solid rgba(17,26,77,0.10);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+      <span style="font-size:12.5px;color:rgba(17,26,77,0.5)">© 2026 JPM Prestige Paintworks Ltd. All rights reserved.</span>
+      <div style="display:flex;gap:20px">
+        <a href="terms-and-conditions.html" style="font-size:12.5px;color:rgba(17,26,77,0.6);text-decoration:none">Terms &amp; Conditions</a>
+        <a href="privacy-policy.html" style="font-size:12.5px;color:rgba(17,26,77,0.6);text-decoration:none">Privacy Policy</a>
+        <a href="#" style="font-size:12.5px;color:rgba(17,26,77,0.6);text-decoration:none">Website by Théo Cristofari</a>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(17,26,77,0.45)">Company No. 12730505 · VAT 440 6435 14</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1E90DF&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#1E90DF&quot;,&quot;#2563C4&quot;,&quot;#1A1C8C&quot;,&quot;#0FB5E8&quot;]},&quot;inkColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#111A4D&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#111A4D&quot;,&quot;#0E1B3D&quot;,&quot;#0B1230&quot;]}}">
+class Component extends DCLogic {
+  sections = [
+    { title: 'We may gather and process the following data about you', paras: [
+      "You may give us personal information by corresponding with us by phone, email, in writing or otherwise. This includes but is not limited to information you provide when you are in receipt of our services. The information you give us may include your name, address, email address and phone number, as well as other personal information associated with the services we provide.",
+    ] },
+    { title: 'How we use your personal data and the lawful basis for processing', paras: [
+      "JPM Prestige Paintworks Limited takes your privacy very seriously and will never disclose, share or sell your data without your consent, unless required to do so by law. We only retain your data for as long as is necessary and for the purposes specified in this notice. Where you have consented to us providing you with details of promotional offers and marketing, you are free to withdraw consent at any time. The purposes and lawful bases for processing your personal data are:",
+    ], bullets: [
+      "We collect your personal data in the performance of a contract or to provide a service",
+      "We collect your personal data to respond to enquiries and to supply relevant marketing information about our services",
+      "From time to time, we would like to contact you to supply relevant marketing information about our services and will seek your consent to do this",
+    ] },
+    { title: 'Your rights as a data subject', paras: [
+      "You have the right to ask JPM Prestige Paintworks Limited whether we process data about you, to have access to that data and in addition the following information:",
+    ], bullets: [
+      "The purposes of the processing",
+      "The categories of the personal data concerned",
+      "The recipients of the data, if any",
+      "The length of time that the personal data is to be stored for",
+      "The right to rectification or erasure of your personal data and restriction of, or objection to, its processing",
+      "The right to lodge a complaint with a supervisory authority",
+      "Information about the source of the data, if not directly from you",
+    ] },
+    { title: '', paras: [
+      "If you believe that we hold any incomplete or inaccurate data about you, you have the right to ask us to correct and/or complete the information and we will endeavour to update/correct it as soon as possible; unless there is a valid reason for not doing so, at which point you will be notified.",
+      "If we receive a request from you to exercise any of the above rights, we may ask you to verify your identity before acting on the relevant request; this is to ensure that your data is protected and kept secure.",
+    ] },
+    { title: 'Sharing and disclosing your personal data', paras: [
+      "JPM Prestige Paintworks Limited does not share or disclose any of your personal data without your consent, other than for the purposes specified in this notice or where there is a legal requirement. However, should we use a third party to provide a service, any processors acting on our behalf only process your data in accordance with instructions from us and comply fully with this privacy notice, the data protection laws and any other appropriate confidentiality and security measures.",
+    ] },
+    { title: 'Security measures', paras: [
+      "JPM Prestige Paintworks Limited takes your privacy seriously and we take every reasonable measure and precaution to protect and secure your personal data. We work hard to protect you and your information from unauthorised access, alteration, disclosure or destruction.",
+    ] },
+    { title: 'Security and performance', paras: [
+      "JPM Prestige Paintworks Limited uses a third-party service to help maintain the security and performance of our website.",
+    ] },
+    { title: 'The right to withdraw consent', paras: [
+      "As the data subject, you have the right to withdraw consent where the basis for the processing of your personal data is that of consent (i.e. the processing is not based on a different justification allowed by the GDPR such as contractual or legal obligation).",
+    ] },
+    { title: 'Consequences of not providing your data', paras: [
+      "You are not obligated to provide your personal data to JPM Prestige Paintworks Limited, however, as this information is required for us to provide you with our products or services, we will not be able to deliver our services without it.",
+    ] },
+    { title: 'How long we keep your data', paras: [
+      "JPM Prestige Paintworks Limited only ever retains personal data for as long as is necessary to meet its legal obligations.",
+      "Where we are using your details for direct marketing, we will keep such data until you notify us to delete the data or withdraw your consent.",
+    ] },
+    { title: 'If you send JPM Prestige Paintworks Limited an email', paras: [
+      "We monitor any emails sent to us, including file attachments, for viruses or malicious software. Please be aware that you have a responsibility to ensure that any email you send is within the bounds of the law.",
+    ] },
+    { title: 'Marketing and offers', paras: [
+      "From time to time, JPM Prestige Paintworks Limited would like to contact you with details of the products and services that we provide. If you consent to us using your contact details for these purposes, you have the right to modify or withdraw your consent at any time by emailing directly and requesting to unsubscribe from any marketing information.",
+    ] },
+    { title: 'Making a complaint', paras: [
+      "JPM Prestige Paintworks Limited only processes your personal information in compliance with this privacy notice and in accordance with the relevant data protection laws. If, however you wish to raise a complaint regarding the processing of your personal data or are unsatisfied with how we have handled your information, you have the right to lodge a complaint with the supervisory authority.",
+      "In the first instance please contact: Joshua Mays — Telephone: 07597980961",
+      "If you are not satisfied you have the right to contact: The Information Commissioner's Office — Telephone: +44 (0) 303 123 1113",
+      "If you have any questions or would like any further information about our privacy policy, you can email us at info@prestigepaintwork.co.uk",
+    ] },
+  ];
+  renderVals() {
+    return {
+      inkColor: this.props.inkColor ?? '#111A4D',
+      accentColor: this.props.accentColor ?? '#1E90DF',
+      sections: this.sections,
+    };
+  }
+}
+</script>
+
+
+</body></html>
