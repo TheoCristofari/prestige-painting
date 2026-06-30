@@ -288,6 +288,9 @@ header {
   }
 
   #top + section {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
     padding-left: 22px !important;
     padding-right: 22px !important;
   }
@@ -304,6 +307,10 @@ header {
   #top + section > div:first-child > div:nth-of-type(2),
   #top + section > div:first-child > div:nth-of-type(3) {
     justify-content: center !important;
+  }
+
+  #top + section > div:last-child {
+    display: none !important;
   }
 }
 
