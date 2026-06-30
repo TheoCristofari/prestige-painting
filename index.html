@@ -378,6 +378,36 @@ header {
     min-height: 0 !important;
     padding: 30px 24px !important;
   }
+
+  section#services + section {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+    padding: 72px 22px !important;
+  }
+
+  section#services + section > div:first-child {
+    display: none !important;
+  }
+
+  section#services + section > div:last-child {
+    text-align: center !important;
+  }
+
+  section#services + section > div:last-child p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  section#services + section > div:last-child > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  section#services + section > div:last-child > div:last-child > sc-for > div,
+  section#services + section > div:last-child > div:last-child > div {
+    justify-content: center !important;
+    text-align: left !important;
+  }
 }
 
 [style*="animation:pp-rise"] {
