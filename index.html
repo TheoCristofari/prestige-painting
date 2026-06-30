@@ -312,6 +312,38 @@ header {
   #top + section > div:last-child {
     display: none !important;
   }
+
+  #top + section + section {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  #top + section + section > div:first-child {
+    margin-bottom: 28px !important;
+  }
+
+  #top + section + section > div:last-child {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  #top + section + section > div:last-child > sc-for > div,
+  #top + section + section > div:last-child > div {
+    min-height: 86px !important;
+    padding: 16px 8px !important;
+    gap: 5px !important;
+  }
+
+  #top + section + section > div:last-child > sc-for > div > div:first-child,
+  #top + section + section > div:last-child > div > div:first-child {
+    font-size: 16px !important;
+  }
+
+  #top + section + section > div:last-child > sc-for > div > div:last-child,
+  #top + section + section > div:last-child > div > div:last-child {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+  }
 }
 
 [style*="animation:pp-rise"] {
