@@ -36,6 +36,10 @@ header {
   display: none;
 }
 
+.quote-mobile-form {
+  display: none;
+}
+
 .mobile-menu-toggle:focus:not(:focus-visible) {
   outline: none;
 }
@@ -202,6 +206,76 @@ header {
 
   footer > div:last-child > div {
     align-items: center !important;
+  }
+
+  section#quote {
+    padding: 56px 0 !important;
+  }
+
+  section#quote > div {
+    grid-template-columns: 1fr !important;
+    padding: 0 22px !important;
+    box-sizing: border-box !important;
+  }
+
+  section#quote > div > div:first-child {
+    padding: 0 !important;
+  }
+
+  section#quote > div > div:last-child {
+    display: none !important;
+  }
+
+  .quote-mobile-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin: 0 0 30px !important;
+  }
+
+  .quote-mobile-form > div {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .quote-mobile-form input,
+  .quote-mobile-form textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #fff !important;
+    border: 1px solid rgba(247,249,252,0.2) !important;
+    border-radius: 2px !important;
+    padding: 15px 16px !important;
+    color: var(--ink,#111A4D) !important;
+    font-family: 'Hanken Grotesk',sans-serif !important;
+    font-size: 14px !important;
+    outline: none !important;
+  }
+
+  .quote-mobile-form textarea {
+    resize: vertical !important;
+    min-height: 112px !important;
+  }
+
+  .quote-mobile-form button {
+    width: 100% !important;
+    background: var(--accent,#1E90DF) !important;
+    color: #111A4D !important;
+    border: none !important;
+    border-radius: 2px !important;
+    padding: 16px !important;
+    font-family: 'Hanken Grotesk',sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+  }
+
+  .quote-mobile-form p {
+    font-size: 12px !important;
+    color: rgba(247,249,252,0.45) !important;
+    margin: 0 !important;
+    text-align: center !important;
   }
 }
 
@@ -813,6 +887,17 @@ document.addEventListener("click", function (event) {
         <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent,#1E90DF);margin-bottom:22px">Free, no-obligation quote</div>
         <h2 style="font-family:'Archivo',sans-serif;font-weight:600;font-size:44px;line-height:1.06;color:#F7F9FC;margin:0 0 20px">Tell us about your car</h2>
         <p style="font-size:16px;line-height:1.62;color:rgba(247,249,252,0.66);margin:0 0 32px;max-width:380px">Send a few photos and the details, we'll come back with an honest assessment and a fixed quote, usually within 24 hours.</p>
+        <form class="quote-mobile-form" action="contact.html" method="get">
+          <div>
+            <input name="name" autocomplete="name" placeholder="Your name">
+            <input name="phone" autocomplete="tel" placeholder="Phone">
+          </div>
+          <input name="email" autocomplete="email" placeholder="Email address">
+          <input name="vehicle" placeholder="Vehicle make &amp; model">
+          <textarea name="message" placeholder="What needs doing?" rows="4"></textarea>
+          <button type="submit">Request my free quote</button>
+          <p>We reply within one working day. No call centres.</p>
+        </form>
         <div style="display:flex;flex-direction:column;gap:14px">
           <a href="tel:01428731147" style="display:flex;align-items:center;gap:14px;text-decoration:none">
             <span style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(247,249,252,0.2);display:flex;align-items:center;justify-content:center;color:var(--accent,#1E90DF);font-size:15px">✆</span>
