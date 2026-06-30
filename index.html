@@ -28,40 +28,126 @@ html.pp-ready body {
   visibility: visible;
 }
 
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-menu-toggle:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.mobile-menu-toggle:focus-visible {
+  outline: 2px solid rgba(30,154,215,0.45);
+  outline-offset: 2px;
+}
+
 @media (max-width: 760px) {
   header > div {
     height: auto !important;
-    min-height: 78px !important;
-    padding: 16px 24px !important;
+    min-height: 72px !important;
+    padding: 14px 22px !important;
     flex-wrap: wrap !important;
-    gap: 14px !important;
+    align-items: center !important;
+    gap: 0 14px !important;
   }
 
   header > div > a:first-child {
     flex: 1 1 auto !important;
+    min-width: 0 !important;
   }
 
-  header > div > div {
-    order: 3 !important;
-    flex: 1 0 100% !important;
-    justify-content: flex-start !important;
-    gap: 18px !important;
-    overflow-x: auto !important;
-    padding-bottom: 2px !important;
+  .mobile-menu-toggle {
+    width: 44px !important;
+    height: 44px !important;
+    border: 1px solid rgba(17,26,77,0.16) !important;
+    border-radius: 2px !important;
+    background: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
   }
 
-  header > div > div a,
-  header nav a {
-    flex: 0 0 auto !important;
+  .mobile-menu-toggle span {
+    width: 19px !important;
+    height: 2px !important;
+    border-radius: 999px !important;
+    background: var(--ink,#111A4D) !important;
+    transition: transform 160ms ease, opacity 160ms ease !important;
   }
 
+  header.is-menu-open .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg) !important;
+  }
+
+  header.is-menu-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0 !important;
+  }
+
+  header.is-menu-open .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg) !important;
+  }
+
+  header > div > div,
   header nav {
-    flex: 0 0 auto !important;
-    gap: 10px !important;
+    display: none !important;
   }
 
-  header nav a[href^="tel:"] {
-    display: none !important;
+  header.is-menu-open > div > div,
+  header.is-menu-open nav {
+    display: flex !important;
+    flex: 1 0 100% !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  header.is-menu-open > div > div {
+    order: 3 !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    margin-top: 14px !important;
+    padding-top: 12px !important;
+    border-top: 1px solid rgba(17,26,77,0.10) !important;
+  }
+
+  header.is-menu-open > div > div a {
+    padding: 13px 0 !important;
+    border-bottom: 1px solid rgba(17,26,77,0.08) !important;
+    font-size: 15px !important;
+  }
+
+  header.is-menu-open nav {
+    order: 4 !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 14px 0 6px !important;
+  }
+
+  header.is-menu-open nav a {
+    width: 100% !important;
+    min-height: 46px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  header.is-menu-open nav a[href^="tel:"] {
+    justify-content: flex-start !important;
+    padding: 12px 14px !important;
+    border: 1px solid rgba(17,26,77,0.12) !important;
+    color: var(--ink,#111A4D) !important;
+    background: #FFFFFF !important;
+  }
+
+  header.is-menu-open nav a:not([href^="tel:"]) {
+    padding: 13px 18px !important;
+    color: #F7F9FC !important;
+    background: var(--ink,#111A4D) !important;
   }
 }
 
@@ -71,6 +157,30 @@ html.pp-ready body {
   transform: none !important;
 }
 </style>
+<script>
+document.addEventListener("click", function (event) {
+  const toggle = event.target.closest(".mobile-menu-toggle");
+  if (toggle) {
+    const header = toggle.closest("header");
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+    if (header) header.classList.toggle("is-menu-open", !isOpen);
+    return;
+  }
+
+  const headerLink = event.target.closest("header a");
+  if (headerLink) {
+    const header = headerLink.closest("header");
+    const button = header && header.querySelector(".mobile-menu-toggle");
+    if (header && button) {
+      header.classList.remove("is-menu-open");
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Open menu");
+    }
+  }
+});
+</script>
 </head>
 <body>
 
@@ -527,6 +637,11 @@ html.pp-ready body {
       <a href="index.html" style="display:flex;align-items:center;text-decoration:none">
         <img src="/assets/0284f397-b87f-4d08-be34-25fa5212b02d.png" alt="Prestige Paintwork" style="height:24px;width:auto;display:block">
       </a>
+      <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:34px">
         <a href="services.html" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;opacity:0.78">Services</a>
         <a href="our-work.html" style="font-size:14px;font-weight:600;color:var(--ink,#111A4D);text-decoration:none;opacity:0.78">Our Work</a>
