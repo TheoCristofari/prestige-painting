@@ -451,12 +451,72 @@ header {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
   }
+
+  section#reviews {
+    padding: 72px 0 !important;
+  }
+
+  section#reviews > div {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  section#reviews > div > div:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
+    margin-bottom: 38px !important;
+    text-align: center !important;
+  }
+
+  section#reviews > div > div:first-child > div {
+    text-align: center !important;
+  }
+
+  section#reviews > div > div:first-child > div:last-child > div:first-child {
+    justify-content: center !important;
+  }
+
+  .reviews-desktop-carousel {
+    display: none !important;
+  }
+
+  .reviews-mobile-carousel {
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  section#reviews > div > div:nth-child(2) > div:first-child > sc-for > div,
+  section#reviews > div > div:nth-child(2) > div:first-child > div {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  section#reviews > div > div:nth-child(2) > div:first-child > sc-for > div > sc-for > div,
+  section#reviews > div > div:nth-child(2) > div:first-child > div > div {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  section#reviews > div > div:nth-child(2) > div:last-child {
+    justify-content: center !important;
+  }
 }
 
 [style*="animation:pp-rise"] {
   animation: none !important;
   opacity: 1 !important;
   transform: none !important;
+}
+
+.reviews-mobile-carousel {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .reviews-mobile-carousel {
+    display: block !important;
+  }
 }
 </style>
 <script>
@@ -1095,12 +1155,30 @@ document.addEventListener("click", function (event) {
           <div style="font-size:13px;color:rgba(247,249,252,0.6);margin-top:8px">5.0 average · 80+ Google reviews</div>
         </div>
       </div>
-      <div style="overflow:hidden">
+      <div class="reviews-desktop-carousel" style="overflow:hidden">
         <div style="display:flex;transition:transform 0.55s cubic-bezier(0.4,0,0.2,1);transform:{{ reviewTrack }}">
           <sc-for list="{{ reviewPages }}" as="pg" hint-placeholder-count="2">
             <div style="min-width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:stretch;padding-bottom:4px">
               <sc-for list="{{ pg.items }}" as="r" hint-placeholder-count="3">
                 <div style="border:1px solid rgba(247,249,252,0.14);border-radius:3px;padding:34px 30px;display:flex;flex-direction:column;gap:18px">
+                  <div style="display:flex;gap:2px;color:var(--accent,#1E90DF);font-size:14px;letter-spacing:2px">★★★★★</div>
+                  <p style="font-family:'Archivo',sans-serif;font-size:18px;line-height:1.5;font-style:italic;color:#F7F9FC;margin:0;flex:1">“{{ r.quote }}”</p>
+                  <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(247,249,252,0.12);padding-top:18px">
+                    <div style="width:38px;height:38px;border-radius:50%;background:rgba(247,249,252,0.10);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:var(--accent,#1E90DF);flex-shrink:0">{{ r.initial }}</div>
+                    <div style="font-size:14px;font-weight:600">{{ r.name }}</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div class="reviews-mobile-carousel" style="display:none;overflow:hidden">
+        <div style="display:flex;transition:transform 0.55s cubic-bezier(0.4,0,0.2,1);transform:{{ reviewTrack }}">
+          <sc-for list="{{ reviewPages }}" as="pg" hint-placeholder-count="1">
+            <div style="min-width:100%;padding-bottom:4px">
+              <sc-for list="{{ pg.items }}" as="r" hint-placeholder-count="1">
+                <div style="border:1px solid rgba(247,249,252,0.14);border-radius:3px;padding:34px 30px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box;width:100%">
                   <div style="display:flex;gap:2px;color:var(--accent,#1E90DF);font-size:14px;letter-spacing:2px">★★★★★</div>
                   <p style="font-family:'Archivo',sans-serif;font-size:18px;line-height:1.5;font-style:italic;color:#F7F9FC;margin:0;flex:1">“{{ r.quote }}”</p>
                   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(247,249,252,0.12);padding-top:18px">
@@ -1270,12 +1348,16 @@ class Component extends DCLogic {
     { quote: 'Really nice guy! Spoke me through options and gave me updates and pictures throughout. He put a new door on and sprayed the side of the van to blend the colour in \u2014 could not possibly tell, and it all looked brand new! He also worked some magic repairing the bumper to look brand new.', initial: 'HP', name: 'Harry Parsons' },
     { quote: 'Got recommended by a close friend to go to Josh. Brilliant communication and got an appointment very quickly. Really high standard job at an unbeatable price. He left the car key tucked away and the garage locked up and tidied. Very reliable, all round genuine guy. Would 100% recommend.', initial: 'AS', name: 'Aaron Seymour' },
   ];
+  reviewItemsPerPage() {
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 760px)').matches) return 1;
+    return 3;
+  }
   goRev(p) {
-    const max = Math.ceil(this.rev.length / 3) - 1;
+    const max = Math.ceil(this.rev.length / this.reviewItemsPerPage()) - 1;
     this.setState({ rpage: Math.max(0, Math.min(max, p)) });
   }
   renderVals() {
-    const perPage = 3;
+    const perPage = this.reviewItemsPerPage();
     const pageCount = Math.ceil(this.rev.length / perPage);
     const cur = Math.max(0, Math.min(pageCount - 1, this.state.rpage));
     const reviewPages = [];
