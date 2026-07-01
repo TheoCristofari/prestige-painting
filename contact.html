@@ -277,6 +277,44 @@ header {
     margin: 0 !important;
     text-align: center !important;
   }
+
+  section[data-screen-label="Contact details"] {
+    padding: 72px 0 !important;
+  }
+
+  section[data-screen-label="Contact details"] > div {
+    grid-template-columns: 1fr !important;
+    gap: 44px !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    box-sizing: border-box !important;
+  }
+
+  section[data-screen-label="Contact details"] > div > div:first-child {
+    order: 2 !important;
+  }
+
+  section[data-screen-label="Contact details"] > div > div:last-child {
+    order: 1 !important;
+    padding: 34px 22px !important;
+    box-sizing: border-box !important;
+  }
+
+  section[data-screen-label="Contact details"] > div > div:last-child > div {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+
+  section[data-screen-label="Contact details"] > div > div:last-child > div > div {
+    grid-template-columns: 1fr !important;
+  }
+
+  section[data-screen-label="Contact details"] > div > div:last-child input,
+  section[data-screen-label="Contact details"] > div > div:last-child textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }
 
 [style*="animation:pp-rise"] {
